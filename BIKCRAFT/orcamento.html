@@ -8,7 +8,14 @@
   <title>Orçamento | Bikcraft</title>
   <meta name="description" content="Orçamento.">
 
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./css/style.min.css" as="style">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body id="orcamento">
@@ -36,7 +43,7 @@
       </div>
     </div>
 
-    <form class="orcamento container" action="./orcamento.html">
+    <form class="orcamento container" action="./enviar.php" method="post">
       <div class="orcamento-produto">
         <h2 class="font-1-xs cor-5">Bikcraft ou Seguro?</h2>
 
@@ -113,7 +120,7 @@
         </div>
         <div class="col-2">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email">
+          <input type="email" id="email" name="email" required>
         </div>
         <h2 class="font-1-xs cor-9 col-2">entrega</h2>
         <div>
@@ -153,7 +160,7 @@
         <ul class="font-2-m cor-5">
           <li><a href="tel:+551199999999">+55 11 9999-9999</a></li>
           <li><a href="mailto:contato@bikcraft.com">contato@bikcraft.com</a></li>
-          <li>Rua Maria Nascimento</li>
+          <li>Rua Maria Nascimento - São Bernardo do Campo</li>
           <li>São Paulo - SP</li>
         </ul>
         <div class="footer-redes">
@@ -182,8 +189,8 @@
       <p class="footer-copy font-2-m cor-6">Bikcraft © Alguns direitos reservados.</p>
     </div>
   </footer>
-  <script src="./js/plugins/simple-anime.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/formulario.js"></script>
 </body>
 
 </html>
