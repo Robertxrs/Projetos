@@ -65,3 +65,23 @@ galeria.forEach(eventosGaleria);
 if (window.SimpleAnime) {
   new SimpleAnime();
 }
+
+// Modo Escuro
+function modoEscuro() {
+  return {
+    escuro: document.querySelector('.botaoEscuro'),
+
+    inicia() {
+      this.pressionaBotao();
+    },
+
+    pressionaBotao() {
+      this.escuro.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark-mode');
+      });
+    },
+  }
+}
+
+const modo = modoEscuro();
+modo.inicia();

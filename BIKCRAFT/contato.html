@@ -10,7 +10,7 @@
 
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="preload" href="./css/style.min.css" as="style">
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/style.css">
   <script>document.documentElement.classList.add('js');</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
-<body id="contato">
+<body class="corpo" id="contato">
   <header class="header-bg">
     <div class="header container">
       <a href="./">
@@ -30,6 +30,7 @@
           <li><a href="./bicicletas.html">Bicicletas</a></li>
           <li><a href="./seguros.html">Seguros</a></li>
           <li><a href="./contato.html">Contato</a></li>
+          <li><a class="botaoEscuro">Modo Escuro</a></li>
         </ul>
       </nav>
     </div>
@@ -47,14 +48,13 @@
       <section class="contato-dados" aria-label="Endereço">
         <h2 class="font-1-m cor-0">Loja Online</h2>
         <div class="contato-endereco font-2-s cor-4">
-          <p>Rua Ali Perto, 35</p>
-          <p>Rio de Janeiro - RJ</p>
-          <p>Brasil - Terra - Vita Láctea</p>
+          <p>Rua Maria Nascimento - São Bernardo do Campo </p>
+          <P>São Paulo - SP</P>
         </div>
         <address class="contato-meios font-2-s cor-4">
           <a href="mailto:contato@bikcraft.com">contato@bikcraft.com</a>
           <a href="mailto:assistencia@bikcraft.com">assistencia@bikcraft.com</a>
-          <a href="tel:+552199999999">+55 21 9999-9999</a>
+          <a href="tel:+551199999999">+55 11 9999-9999</a>
         </address>
         <div class="contato-redes">
           <a href="./">
@@ -76,7 +76,7 @@
           </div>
           <div>
             <label for="telefone">Telefone</label>
-            <input type="text" id="telefone" name="telefone" placeholder="(21) 9999-9999">
+            <input type="text" id="telefone" name="telefone" placeholder="(11) 9999-9999">
           </div>
           <div class="col-2">
             <label for="email">Email</label>
