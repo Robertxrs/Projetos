@@ -1,1 +1,30 @@
-<p>footer works!</p>
+<footer class="footer-bg">
+  <div class="footer container">
+    <img [src]="footerContact.logo" width="136" height="32" alt="Bikcraft">
+    <div class="footer-contato">
+      <h3 class="font-2-l-b cor-0">{{footerContact.title}}</h3>
+      <ul class="font-2-m cor-5">
+        <li><a [href]="footerContact.telLink">{{footerContact.contact.telephone}}</a></li>
+        <li><a [href]="footerContact.emailLink">{{footerContact.contact.email}}</a></li>
+        <li><a [href]="footerContact.address.addressLink" target="_blank">{{footerContact.address.street}} - {{footerContact.address.neighborhood}}</a></li>
+        <li>{{footerContact.address.state}} - {{footerContact.address.abbreviation}}</li>
+      </ul>
+      <div class="footer-redes" >
+        <ng-container *ngFor="let net of footerNetwork">
+          <a [href]="net.link"  target="_blank">
+            <img [src]="net.svgSrc" width="32" height="32" alt="Redes">
+          </a>
+        </ng-container>
+      </div>
+    </div>
+    <div class="footer-informacoes">
+      <h3 class="font-2-l-b cor-0">Informações</h3>
+      <nav>
+        <ul class="font-1-m cor-5" *ngFor="let info of footerInfo">
+          <li><a [routerLink]="info.path">{{info.title}}</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-copy font-2-m cor-6">Bikcraft © Alguns direitos reservados.</p>
+  </div>
+</footer>

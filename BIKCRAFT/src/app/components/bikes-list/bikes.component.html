@@ -5,10 +5,9 @@
     <li *ngFor="let bike of bikeList">
       <a [routerLink]="bike.path">
         <img [src]="bike.imgSrc" alt="Bicicleta preta" width="920" height="1040">
-          <h3 class="font-1-xl">{{bike.titulo}}</h3>
+        <h3 class="font-1-xl">{{bike.titulo}}</h3>
         <span class="font-2-m cor-8">R$ {{bike.valor}}</span>
       </a>
     </li>
   </ul>
 </article>
-
