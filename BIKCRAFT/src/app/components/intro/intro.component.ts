@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
+  introContent: any = {
+    title:'Bicicletas feitas sob medida',
+    description:'Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para você. Explore o mundo na sua velocidade com a Bikcraft.',
+    button:'Escolha a sua',
+    sourceSrc:'../../../assets/img/bicicletas/nimbus.jpg',
+    imgSrc:'../../../assets/img/fotos/introducao.jpg',
+  };
+
   constructor() { }
 
   ngOnInit(): void {

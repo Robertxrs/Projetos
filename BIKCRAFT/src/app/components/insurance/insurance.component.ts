@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsuranceComponent implements OnInit {
 
-  insuranceList: any[] = [
-    {
+  insuranceList: any = [{
       titulo: 'PRATA',
       valor: 'R$ 199 mensal',
       list: [
@@ -19,7 +18,6 @@ export class InsuranceComponent implements OnInit {
       ],
       path: '/budget?tipo=seguro&produto=prata',
       botao: 'Inscreva-se',
-      classe: 'secundario'
     },
     {
       titulo: 'OURO',
