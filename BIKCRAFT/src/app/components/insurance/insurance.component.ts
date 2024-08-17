@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵsetClassMetadata } from '@angular/core';
 
 @Component({
   selector: 'app-insurance',
@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class InsuranceComponent implements OnInit {
 
   insuranceList: any = [{
-      titulo: 'PRATA',
-      valor: 'R$ 199 mensal',
+      title: 'PRATA',
+      price: '199',
       list: [
         'Duas trocas por ano',
         'Assistência técnica',
@@ -17,11 +17,12 @@ export class InsuranceComponent implements OnInit {
         'Cobertura estadual'
       ],
       path: '/budget?tipo=seguro&produto=prata',
-      botao: 'Inscreva-se',
+      button: 'Inscreva-se',
+      class:'secundario'
     },
     {
-      titulo: 'OURO',
-      valor: 'R$ 299 mensal',
+      title: 'OURO',
+      price: '299',
       list: [
         'Cinco trocas por ano',
         'Assistência especial',
@@ -31,8 +32,8 @@ export class InsuranceComponent implements OnInit {
         'Acesso ao Clube Bikcraft'
       ],
       path: '/budget?tipo=seguro&produto=ouro',
-      botao: 'Inscreva-se',
-      classe: ''
+      button: 'Inscreva-se',
+      class: ''
     },
   ];
 
