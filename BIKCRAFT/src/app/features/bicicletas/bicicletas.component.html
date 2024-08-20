@@ -6,97 +6,22 @@
     </div>
   </div>
 
-  <div class="bicicletas container">
-    <div class="bicicletas-imagem">
-      <img src="../../../assets/img/bicicletas/nimbus.jpg" alt="Bicicleta preta">
-      <span class="font-2-m cor-0">R$ 4999</span>
-    </div>
-    <div class="bicicletas-conteudo">
-      <h2 class="font-1-xl">Nimbus Stark</h2>
-      <p class="font-2-s cor-8">A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios, o que garante maior velocidade.</p>
-      <ul class="font-1-m cor-8">
-        <li>
-          <img src="../../../assets/img/icones/eletrica.svg" alt="">
-          Motor Elétrico
-        </li>
-        <li>
-          <img src="../../../assets/img/icones/carbono.svg" alt="">
-          Fibra de Carbono
-        </li>
-        <li>
-          <img src="../../../assets/img/icones/velocidade.svg" alt="">
-          60 km/h
-        </li>
-        <li>
-          <img src="../../../assets/img/icones/rastreador.svg" alt="">
-          Rastreador
-        </li>
-      </ul>
-      <a class="botao seta" routerLink="/bike/3">Mais Sobre</a>
-
-    </div>
-  </div>
-
-  <div class="bicicletas-bg">
-    <div class="bicicletas container">
+  <ng-container *ngFor="let bike of bikes">
+    <div [class]="bike.class" class="bicicletas container">
       <div class="bicicletas-imagem">
-        <img src="../../../assets/img/bicicletas/magic.jpg" alt="Bicicleta preta">
-        <span class="font-2-m cor-0">R$ 2499</span>
+        <img [src]="bike.imgSrc" [alt]="bike.altSrc">
+        <span class="font-2-m cor-0">R$ {{bike.price}}</span>
       </div>
       <div class="bicicletas-conteudo">
-        <h2 class="font-1-xl cor-0">Magic Might</h2>
-        <p class="font-2-s cor-5">A Magic Might é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios, o que garante maior velocidade.</p>
-        <ul class="font-1-m cor-5">
-          <li>
-            <img src="../../../assets/img/icones/eletrica.svg" alt="">
-            Motor Elétrico
-          </li>
-          <li>
-            <img src="../../../assets/img/icones/carbono.svg" alt="">
-            Fibra de Carbono
-          </li>
-          <li>
-            <img src="../../../assets/img/icones/velocidade.svg" alt="">
-            45 km/h
-          </li>
-          <li>
-            <img src="../../../assets/img/icones/rastreador.svg" alt="">
-            Rastreador
+        <h2 class="font-1-xl">{{bike.title}}</h2>
+        <p class="font-2-s cor-8">{{bike.description}}</p>
+        <ul class="font-1-m cor-8">
+          <li *ngFor="let ic of bike.listIcons">
+            <img [src]="ic.icon" [alt]="ic.alt"> {{ic.subtitle}}
           </li>
         </ul>
-        <a class="botao seta" routerLink="/bike/1">Mais Sobre</a>
+        <a class="botao seta" [routerLink]="bike.path">{{bike.button}}</a>
       </div>
     </div>
-  </div>
-
-  <div class="bicicletas container">
-    <div class="bicicletas-imagem">
-      <img src="../../../assets/img/bicicletas/nebula.jpg" alt="Bicicleta preta">
-      <span class="font-2-m cor-0">R$ 3999</span>
-    </div>
-    <div class="bicicletas-conteudo">
-      <h2 class="font-1-xl">Nebula Cosmic</h2>
-      <p class="font-2-s cor-8">A Nebula Cosmic é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios, o que garante maior velocidade.</p>
-      <ul class="font-1-m cor-8">
-        <li>
-          <img src="../../../assets/img/icones/eletrica.svg" alt="">
-          Motor Elétrico
-        </li>
-        <li>
-          <img src="../../../assets/img/icones/carbono.svg" alt="">
-          Fibra de Carbono
-        </li>
-        <li>
-          <img src="../../../assets/img/icones/velocidade.svg" alt="">
-          50 km/h
-        </li>
-        <li>
-          <img src="../../../assets/img/icones/rastreador.svg" alt="">
-          Rastreador
-        </li>
-      </ul>
-      <a class="botao seta" routerLink="/bike/2">Mais Sobre</a>
-    </div>
-  </div>
-
+  </ng-container>
 </main>
