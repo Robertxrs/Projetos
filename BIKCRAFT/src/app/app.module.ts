@@ -18,7 +18,7 @@ import { AdvantagesComponent } from './components/advantages/advantages.componen
 import { QuestionsComponent } from './components/questions/questions.component';
 import { SeguroBikeComponent } from './components/seguro-bike/seguro-bike.component';
 import { BikeDetailsComponent } from './features/bike-details/bike-details.component';
-
+import { StoreLocationComponent } from './components/store-location/store-location.component'; // Certifique-se de importar o componente
 
 @NgModule({
   declarations: [
@@ -37,7 +37,8 @@ import { BikeDetailsComponent } from './features/bike-details/bike-details.compo
     AdvantagesComponent,
     QuestionsComponent,
     SeguroBikeComponent,
-    BikeDetailsComponent
+    BikeDetailsComponent,
+    StoreLocationComponent,
   ],
   imports: [
     BrowserModule,

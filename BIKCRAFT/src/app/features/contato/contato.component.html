@@ -1,30 +1,37 @@
-<main id="contato">
+<main>
   <div class="titulo-bg">
     <div class="titulo container">
-      <p class="font-2-l cor-5">{{ contactInfo.subtitle }}</p>
-      <h1 class="font-1-xxl cor-0">{{ contactInfo.title }}<span class="cor-p1">.</span></h1>
+      <p class="font-2-l-b cor-5">Respostas em até 24h</p>
+      <h1 class="font-1-xxl cor-0">nosso contato<span class="cor-p1">.</span></h1>
     </div>
   </div>
 
   <div class="contato container">
     <section class="contato-dados" aria-label="Endereço">
-      <h2 class="font-1-m cor-0">{{ contactInfo.addressShop.title }}</h2>
+
+      <h2 class="font-1-m cor-0">{{ contactInfo.title }}</h2>
       <div class="contato-endereco font-2-s cor-4">
-        <p>{{ contactInfo.addressShop.street }}</p>
-        <p>{{ contactInfo.addressShop.city }}</p>
+        <p>{{ contactInfo.street }}</p>
+        <p>{{ contactInfo.city }}</p>
       </div>
-      <address class="contato-meios font-2-s cor-4">
-        <a *ngFor="let addr of contactInfo.address" [href]="addr.href">{{ addr.contact }}</a>
-      </address>
+
+      <ng-container *ngFor="let con of contactInfo.contactAddress">
+        <address class="contato-meios font-2-s cor-4">
+          <a [href]="con.ref">{{ con.text }}</a>
+        </address>
+      </ng-container>
+
       <div class="contato-redes">
-        <a *ngFor="let net of contactInfo.network" [href]="net.imgRef">
-          <img [src]="net.imgSrc" [alt]="net.alt">
-        </a>
+        <ng-container *ngFor="let net of contactInfo.contactNet">
+          <a [href]="net.ref">
+            <img [src]="net.imgSrc" [alt]="net.alt">
+          </a>
+        </ng-container>
       </div>
     </section>
 
     <section class="contato-formulario" aria-label="Formulário">
-      <form class="form">
+      <form class="form" action="./enviar.php" method="post">
         <div>
           <label for="nome">Nome</label>
           <input type="text" id="nome" name="nome" placeholder="Seu nome">
@@ -47,37 +54,4 @@
   </div>
 </main>
 
-<article class="lojas container">
-  <h2 class="font-1-xxl">lojas locais<span class="cor-p1">.</span></h2>
-  <div class="lojas-item">
-    <img src="../../../assets/img/lojas/rj.jpg" alt="mapa marcando o endereço em Rua Ali Perto, 25 - Rio de Janeiro - RJ">
-    <div class="lojas-conteudo">
-      <h3 class="font-1-xl">Rio de Janeiro</h3>
-      <div class="lojas-dados font-2-s cor-8">
-        <p>Rua Ali Perto, 25</p>
-        <p>Rio de Janeiro - RJ</p>
-      </div>
-      <div class="lojas-dados font-2-s cor-8">
-        <a href="mailto:rj@bikcraft.com">rj.com</a>
-        <a href="tel:+552199999999">+55 21 9999-9999</a>
-      </div>
-      <p class="lojas-tempo font-1-s"><img src="../../../assets/img/icones/horario.svg" alt="">08-18h de seg à dom</p>
-    </div>
-  </div>
-
-  <div class="lojas-item">
-    <img src="../../../assets/img/lojas/sp.jpg" alt="mapa marcando o endereço em Rua Ali Perto, 25 - São Paulo - SP">
-    <div class="lojas-conteudo">
-      <h3 class="font-1-xl">São Paulo</h3>
-      <div class="lojas-dados font-2-s cor-8">
-        <p>Rua Ali Perto, 25</p>
-        <p>São Paulo - SP</p>
-      </div>
-      <div class="lojas-dados font-2-s cor-8">
-        <a href="mailto:sp@bikcraft.com">ikcraft.com</a>
-        <a href="tel:+551199999999">+55 11 9999-9999</a>
-      </div>
-      <p class="lojas-tempo font-1-s"><img src="../../../assets/img/icones/horario.svg" alt="">08-18h de seg à dom</p>
-    </div>
-  </div>
-</article>
+<app-store-location></app-store-location>

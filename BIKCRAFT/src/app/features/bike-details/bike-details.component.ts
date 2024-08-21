@@ -27,6 +27,8 @@ export class BikeDetailsComponent implements OnInit {
       iconStock:'../../../../assets/img/icones/estoque.svg',
       deliver: '5',
       stock: '19',
+      titleInfo:'Informações',
+      titleTechnical:'Ficha Técnica',
       info: [
         {
           icon: 'eletric',

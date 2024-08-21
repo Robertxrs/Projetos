@@ -9,6 +9,7 @@ export class FooterComponent implements OnInit {
   footerContact: any = {
     logo: '../../../assets/img/bikcraft.svg',
     title: 'Contato',
+    copy:'Bikcraft © Alguns direitos reservados.',
     contact: {
       telLink:'tel:+551199999999',
       telephone: '+55 11 9999-9999',
@@ -48,9 +49,6 @@ export class FooterComponent implements OnInit {
   },{
     path:'/contact',
     title:'Contato'
-  },{
-    path:'/terms',
-    title:'Termos e Condições'
   }
 ]
 

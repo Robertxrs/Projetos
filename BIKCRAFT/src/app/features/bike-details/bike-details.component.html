@@ -16,16 +16,16 @@
       <p class="font-2-l cor-5">{{bike.description}}</p>
       <div class="bicicleta-comprar">
         <a class="botao" routerLink="/budget">Comprar Agora</a>
-        <span class="font-1-xs cor-6"> <img src="../../../../assets/img/icones/estoque.svg" alt="Icones ">
+        <span class="font-1-xs cor-6"> <img [src]="bike.iconStock" alt="Icone de Estoque">
           entrega em {{bike.deliver}} dias
         </span>
         <span class="font-1-xs cor-6">
-          <img src="../../../../assets/img/icones/estoque.svg" alt="">
+          <img [src]="bike.iconDeliver" alt="Icone de Entrega">
           {{bike.stock}} em estoque
         </span>
       </div>
 
-      <h2 class="font-1-xs cor-0">Informações</h2>
+      <h2 class="font-1-xs cor-0">{{bike.titleInfo}}</h2>
       <ul class="bicicleta-informacoes" >
         <li *ngFor="let ic of bike.info">
           <img [src]="icons[ic.icon]" alt="Icones">
@@ -34,7 +34,7 @@
         </li>
       </ul>
 
-      <h2 class="font-1-xs cor-0">Ficha Técnica</h2>
+      <h2 class="font-1-xs cor-0">{{bike.titleTechnical}}</h2>
       <ul class="bicicleta-ficha font-2-s cor-4">
         <li>Peso <span>{{bike.technicalSheet.weight}} kg</span></li>
         <li>Altura <span>{{bike.technicalSheet.height}} cm</span></li>

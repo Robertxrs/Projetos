@@ -11,6 +11,7 @@ export class OrcamentoComponent implements OnInit {
     title: 'solicite um orçamento',
     subtitle: 'Cotações no seu email',
     titleProduct: 'Bikcraft ou Seguro?',
+
     types: [
       {
         name: 'bikcraft',
@@ -72,12 +73,25 @@ export class OrcamentoComponent implements OnInit {
       }
     ],
     personalDataTitle: 'dados pessoais',
-    deliveryTitle: 'entrega'
+    personalData: [
+      { id: 'nome', label: 'Nome', type: 'text', placeholder: '' },
+      { id: 'sobrenome', label: 'Sobrenome', type: 'text', placeholder: '' },
+      { id: 'cpf', label: 'CPF', type: 'text', placeholder: '000.000.000-00' },
+      { id: 'email', label: 'Email', type: 'email', placeholder: '' },
+    ],
+    deliveryTitle: 'entrega',
+    deliveryData: [
+      { id: 'cep', label: 'CEP', type: 'text', placeholder: '' },
+      { id: 'numero', label: 'Número', type: 'text', placeholder: '' },
+      { id: 'logradouro', label: 'Logradouro', type: 'text', placeholder: '' },
+      { id: 'bairro', label: 'Bairro', type: 'text', placeholder: '' },
+      { id: 'cidade', label: 'Cidade', type: 'text', placeholder: '' },
+      { id: 'estado', label: 'Estado', type: 'text', placeholder: '' },
+    ]
   };
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

@@ -7,11 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Bikcraft';
-
-  informacao?:string;
-
-  getInformacao():void{
-    this.informacao = 'informacao gap'
-  }
-
 }
