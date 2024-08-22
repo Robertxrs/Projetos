@@ -1,0 +1,60 @@
+<main id="orcamento">
+  <div class="titulo-bg">
+    <div class="titulo container">
+      <p class="font-2-l-b cor-5">{{budget.subtitle}}</p>
+      <h1 class="font-1-xxl cor-0">{{budget.title}}<span class="cor-p1">.</span></h1>
+    </div>
+  </div>
+
+
+  <form class="orcamento container">
+    <div class="orcamento-produto">
+      <h2 class="font-1-xs cor-5">{{budget.titleProduct}}</h2>
+      <ng-container *ngFor="let t of type.choice">
+        <input [type]="t.type" [name]="t.name" [value]="t.value" [id]="t.id">
+        <label [for]="t.for">{{t.text}}</label>
+      </ng-container>
+
+      <div class="orcamento-conteudo" id="orcamento-bikcraft">
+        <h2 class="font-1-xs cor-5">Escolha a sua</h2>
+      <ng-container *ngFor="let b of type.bike">
+        <input [type]="b.type" [name]="b.name" [value]="b.value" [id]="b.id">
+        <label [for]="b.for">{{b.nameProd}}<span>R$ {{b.price}}</span></label>
+
+        <div class="orcamento-detalhes">
+          <ul class="font-1-xs cor-8" *ngFor="let ic of b.icon">
+            <li><img [src]="ic.imgSrc" [alt]="ic.alt">{{ic.text}}</li>
+          </ul>
+          <img [src]="b.img" [alt]="b.alt">
+        </div>
+      </ng-container>
+      </div>
+
+      <div class="orcamento-conteudo" id="orcamento-seguro">
+        <h2 class="font-1-xs cor-5">Escolha o plano</h2>
+        <ng-container *ngFor="let plan of type.choicePlan">
+        <input [type]="plan.type" [name]="plan.name" [value]="plan.value" [id]="plan.id">
+        <label [for]="plan.for">{{plan.text}} <span>R$ {{plan.price}}</span></label>
+      </ng-container>
+      </div>
+    </div>
+
+    <div class="orcamento-dados form">
+      <h2 class="font-1-xs cor-9 col-2">dados pessoais</h2>
+      <ng-container *ngFor="let per of type.budgetPersonal">
+      <div>
+        <label [for]="per.for">{{per.text}}</label>
+        <input [type]="per.type" [id]="per.id" [name]="per.name" [required]="per.required" [placeholder]="per.placeholder">
+      </div>
+      </ng-container>
+      <h2 class="font-1-xs cor-9 col-2">entrega</h2>
+      <ng-container *ngFor="let del of type.budgetDelivery">
+        <div>
+        <label [for]="del.for">{{del.text}}</label>
+        <input [type]="del.type" [id]="del.id" [name]="del.name" [required]="del.required" [placeholder]="del.placeholder">
+        </div>
+      </ng-container>
+      <button class="botao col-2">Solicitar Orçamento</button>
+    </div>
+  </form>
+</main>

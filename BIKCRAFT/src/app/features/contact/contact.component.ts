@@ -1,5 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
+interface obj{
+  labelFor:string,
+  text:string,
+  inputType:string,
+  id:string,
+  name:string,
+  placeholder:string,
+  class?:string
+}
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -45,7 +55,8 @@ export class ContactComponent implements OnInit {
         alt: 'Youtube',
       },
     ],
-    contactForm: [{
+    contactForm:[
+      {
         labelFor:'nome',
         text:'nome',
         inputType:'text',
@@ -58,7 +69,7 @@ export class ContactComponent implements OnInit {
       inputType:'text',
       id:'telefone',
       name:'telefone',
-      placeholder:'(11) 9999-9999',
+      placeholder:'11 99999-9999',
     },
     {
       labelFor:'email',
@@ -67,14 +78,17 @@ export class ContactComponent implements OnInit {
       id:'email',
       name:'email',
       placeholder:'contato@email.com',
+      class:'col-2'
     }
     ,{
       labelFor:'mensagem',
       text:'Mensagem',
+      inputType: 'textarea',
       rows:'5',
       id:'mensagem',
       name:'mensagem',
       placeholder:'O que você precisa?',
+      class:'col-2'
     }]
   };
 

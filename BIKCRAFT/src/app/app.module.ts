@@ -2,6 +2,7 @@ import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './components/header/header.component';
 import { IntroComponent } from './components/intro/intro.component';
@@ -20,6 +21,7 @@ import { SeguroBikeComponent } from './components/seguro-bike/seguro-bike.compon
 import { BikeDetailsComponent } from './features/bike-details/bike-details.component';
 import { StoreLocationComponent } from './components/store-location/store-location.component';
 import { ContactComponent } from './features/contact/contact.component';
+import { BudgetComponent } from './features/budget/budget.component';
 
 @NgModule({
   declarations: [
@@ -41,10 +43,12 @@ import { ContactComponent } from './features/contact/contact.component';
     BikeDetailsComponent,
     StoreLocationComponent,
     ContactComponent,
+    BudgetComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
