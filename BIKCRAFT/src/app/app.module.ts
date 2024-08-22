@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +18,8 @@ import { AdvantagesComponent } from './components/advantages/advantages.componen
 import { QuestionsComponent } from './components/questions/questions.component';
 import { SeguroBikeComponent } from './components/seguro-bike/seguro-bike.component';
 import { BikeDetailsComponent } from './features/bike-details/bike-details.component';
-import { StoreLocationComponent } from './components/store-location/store-location.component'; // Certifique-se de importar o componente
+import { StoreLocationComponent } from './components/store-location/store-location.component';
+import { ContactComponent } from './features/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { StoreLocationComponent } from './components/store-location/store-locati
     SeguroBikeComponent,
     BikeDetailsComponent,
     StoreLocationComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
