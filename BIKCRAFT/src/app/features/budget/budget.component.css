@@ -152,9 +152,6 @@
   display: grid;
 }
 
-.col-2 {
-  grid-column: span 2;
-}
 
 @media (max-width: 1200px) {
   .orcamento-produto,
