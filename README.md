@@ -5,6 +5,4 @@ Coleção de projetos do meu processo de aprendizado. Aplicando conhecimentos ad
 
 * WorkshopMongo : Este é um projeto de java com spring boot e mongodb que permite uma  interação de adicionar, remover, modificar usuários, posts de usuários e comentários.
 
-* Portfolio : Projeto em HTML e CSS que apresenta um portfolio generico.
-
 * Bikcraft : Projeto em Angular que apresenta um site de compra de bicicletas.
